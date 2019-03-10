@@ -80,7 +80,7 @@ class Calorie extends Component {
 }
 
 Calorie.propTypes = {
-  deleteCalorie: PropTypes.func.isRequired,
+  deleteCalories: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired
 }
 

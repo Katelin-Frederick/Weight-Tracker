@@ -83,7 +83,7 @@ class CaloricNeeds extends Component {
       case 'Heavy Exercise (6-7 days/week)':
         activityValue = 1.725
         break
-      case 'Very Heavy Exercise Ttwice per day, extra heavy workouts)':
+      case 'Very Heavy Exercise Twice per day, extra heavy workouts)':
         activityValue = 1.9
         break
       default:
@@ -140,7 +140,7 @@ class CaloricNeeds extends Component {
       { label: 'Light Exercise (1-3 days/week)', value: 'Light Exercise (1-3 days/week)' },
       { label: 'Moderate Exercise (3-5 days/week)', value: 'Moderate Exercise (3-5 days/week)' },
       { label: 'Heavy Exercise (6-7 days/week)', value: 'Heavy Exercise (5-7 days/week)' },
-      { label: 'Very Heavy Exercise Ttwice per day, extra heavy workouts)', value: 'Very Heavy Exercise (Twice per day, extra heavy workouts' }
+      { label: 'Very Heavy Exercise Twice per day, extra heavy workouts)', value: 'Very Heavy Exercise (Twice per day, extra heavy workouts' }
     ]
 
     return (
