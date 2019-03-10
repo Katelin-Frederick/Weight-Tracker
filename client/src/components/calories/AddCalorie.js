@@ -6,13 +6,13 @@ import { Link, withRouter } from 'react-router-dom'
 
 // Local Imports
 import TextFieldGroup from '../common/TextFieldGroup'
-import { addWeight } from '../../actions/profileActions'
+import { addCalorie } from '../../actions/profileActions'
 
-class AddWeight extends Component {
+class AddCalorie extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      weight: '',
+      calorie: '',
       date: '',
       errors: {}
     }
@@ -31,46 +31,46 @@ class AddWeight extends Component {
   onSubmit = e => {
     e.preventDefault()
 
-    const newWeight = {
-      weight: this.state.weight,
+    const newCalorie = {
+      calorie: this.state.calorie,
       date: this.state.date
     }
 
-    this.props.addWeight(newWeight, this.props.history)
+    this.props.addCalorie(newCalorie, this.props.history)
   }
-  
+
   render() {
     const { errors } = this.state
 
     return (
-      <div className="add-weight">
+      <div className="add-calorie">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
               <Link to="/dashboard" className="btn btn-light">
                 Go Back
               </Link>
-              <h1 className="display-4 text-center">Add Weight</h1>
+              <h1 className="display-4 text-center">Add Calories</h1>
               <p className="lead text-center">
-                Add a new weight
+                Add a new calorie intake
               </p>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="Weight"
-                  name="weight"
-                  value={this.state.weight}
+                  placeholder="Calories"
+                  name="calorie"
+                  value={this.state.calorie}
                   type="number"
                   min="1"
-                  info='Add a new weight'
+                  info='Add a new calorie intake'
                   onChange={this.onChange}
-                  error={errors.weight}
+                  error={errors.calorie}
                 />
 
                 <TextFieldGroup
                   name="date"
                   value={this.state.date}
                   type="date"
-                  info='Date the weight was taken on'
+                  info='Date the calories were consumed'
                   onChange={this.onChange}
                   error={errors.date}
                 />
@@ -85,10 +85,10 @@ class AddWeight extends Component {
   }
 }
 
-AddWeight.propTypes = {
+AddCalorie.propTypes = {
   profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired,
-  addWeight: PropTypes.func.isRequired
+  addCalorie: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
@@ -96,4 +96,4 @@ const mapStateToProps = state => ({
   errors: state.errors
 })
 
-export default connect(mapStateToProps, { addWeight })(withRouter(AddWeight))
+export default connect(mapStateToProps, { addCalorie })(withRouter(AddCalorie))

@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom'
 // Local Imports
 import { registerUser } from '../../actions/authActions'
 import TextFieldGroup from '../common/TextFieldGroup'
+import SelectListGroup from '../common/SelectListGroup'
 
 class Register extends Component {
   constructor() {
@@ -14,6 +15,9 @@ class Register extends Component {
     this.state = {
       name: '',
       email: '',
+      gender: '',
+      birthday: '',
+      height: {},
       password: '',
       password2: '',
       errors: {}
@@ -42,6 +46,10 @@ class Register extends Component {
     const newUser = {
       name: this.state.name,
       email: this.state.email,
+      gender: this.state.gender,
+      birthday: this.state.birthday,
+      feet: this.state.feet,
+      inches: this.state.inches,
       password: this.state.password,
       password2: this.state.password2
     }
@@ -51,6 +59,12 @@ class Register extends Component {
 
   render() {
     const { errors } = this.state
+
+    const options = [
+      { label: 'Select Gender', value: 0 },
+      { label: 'Male', value: 'Male' },
+      { label: 'Female', value: 'Female' }
+    ]
 
     return (
       <div className="register">
@@ -78,6 +92,47 @@ class Register extends Component {
                   error={errors.email}
                 />
 
+                <SelectListGroup
+                  placeholder="Gender"
+                  name="gender"
+                  value={this.state.gender}
+                  onChange={this.onChange}
+                  options={options}
+                  error={errors.gender}
+                  info="Enter your gender"
+                />
+
+                <TextFieldGroup
+                  name="birthday"
+                  value={this.state.birthday}
+                  type="date"
+                  info='Your date of birth'
+                  onChange={this.onChange}
+                  error={errors.birthday}
+                />
+
+                <TextFieldGroup
+                  placeholder="Feet"
+                  name="feet"
+                  value={this.state.feet}
+                  type="number"
+                  min="1"
+                  max="7"
+                  onChange={this.onChange}
+                  error={errors.feet}
+                />
+
+                <TextFieldGroup
+                  placeholder="Inches"
+                  name="inches"
+                  value={this.state.inches}
+                  type="number"
+                  min="0"
+                  max="11"
+                  onChange={this.onChange}
+                  error={errors.inches}
+                />
+
                 <TextFieldGroup
                   placeholder="Password"
                   name="password"
@@ -96,7 +151,11 @@ class Register extends Component {
                   error={errors.password2}
                 />
 
-                <input type="submit" className="btn btn-info btn-block mt-4" />
+                <input 
+                  type="submit" 
+                  className="btn btn-info btn-block mt-4" 
+                  id="registerSubmit" 
+                />
               </form>
             </div>
           </div>

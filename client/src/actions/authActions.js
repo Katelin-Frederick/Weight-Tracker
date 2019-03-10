@@ -1,11 +1,9 @@
 import setAuthToken from '../utils/setAuthToken'
 import axios from 'axios'
 import jwt_decode from 'jwt-decode'
-import { setProfileLoading } from './profileActions'
 import { 
   GET_ERRORS,
-  SET_CURRENT_USER,
-  GET_PROFILE,
+  SET_CURRENT_USER
 } from './types'
 
 // Register User
@@ -49,24 +47,6 @@ export const setCurrentUser = decoded => {
     type: SET_CURRENT_USER,
     payload: decoded
   }
-}
-
-// Get Current User
-export const getCurrentProfile = () => dispatch => {
-  dispatch(setProfileLoading())
-  axios.get('/api/users/current')
-    .then(res =>
-      dispatch({
-        type: GET_PROFILE,
-        payload: res.data
-      })
-    )
-    .catch(err =>
-      dispatch({
-        type: GET_PROFILE,
-        payload: {}
-      })
-    )
 }
 
 // Log User Out

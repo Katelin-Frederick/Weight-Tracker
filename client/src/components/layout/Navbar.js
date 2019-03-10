@@ -21,6 +21,11 @@ class Navbar extends Component {
           </Link>
         </li>
         <li className="nav-item">
+          <Link className="nav-link" to="/add-calories">
+            Add Calories <i className="fas fa-plus ml-1"></i>
+          </Link>
+        </li>
+        <li className="nav-item">
           <a 
             href="/"
             onClick={this.onLogoutClick}

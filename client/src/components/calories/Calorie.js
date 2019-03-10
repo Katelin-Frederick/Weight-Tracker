@@ -6,31 +6,31 @@ import Moment from 'react-moment'
 import moment from 'moment'
 
 // Local Imports
-import { deleteWeight } from '../../actions/profileActions'
+import { deleteCalories } from '../../actions/profileActions'
 import Chart from '../common/Chart'
 
-class Weight extends Component {
+class Calorie extends Component {
   getData = () => {
-    let weightData = []
+    let calorieData = []
     let dateData = []
 
-    this.props.profile.profile.weights.sort((a, b) => {
+    this.props.profile.profile.calories.sort((a, b) => {
       return a.date < b.date ? -1 : a.date > b.date ? 1 : 0
     }).map(item => {
-      weightData.push(item.weight)
+      calorieData.push(item.calorie)
       dateData.push(moment(item.date).add(1, 'days', 6, 'hours').format("MM/DD/YYYY"))
 
-      return (weightData, dateData)
+      return (calorieData, dateData)
     })
 
     return {
       labels: dateData,
       datasets: [
         {
-          label: 'Weights',
-          data: weightData,
+          label: 'Calories',
+          data: calorieData,
           backgroundColor:[
-            'rgba(0, 38, 153, 0.6)'
+            'rgba(230, 138, 0, 0.6)'
           ]
         }
       ]
@@ -38,23 +38,23 @@ class Weight extends Component {
   }
 
   onDeleteClick(id) {
-    this.props.deleteWeight(id)
+    this.props.deleteCalories(id)
   }
 
   render() {
-    const weights = this.props.profile.profile.weights.sort((a, b) => {
+    const calories = this.props.profile.profile.calories.sort((a, b) => {
       return a.date > b.date ? -1 : a.date < b.date ? 1 : 0})
-      .map(weight => (
-      <tr key={weight._id}>
+      .map(calorie => (
+      <tr key={calorie._id}>
         <td>
-          {weight.weight}
+          {calorie.calorie}
         </td>
         <td>
-          <Moment format="MM/DD/YYYY">{moment(weight.date).add(1, 'days', 6, 'hours')}</Moment>
+          <Moment format="MM/DD/YYYY">{moment(calorie.date).add(1, 'days', 6, 'hours')}</Moment>
         </td>
         <td>
         <button 
-            onClick={this.onDeleteClick.bind(this, weight._id)} 
+            onClick={this.onDeleteClick.bind(this, calorie._id)} 
             className="btn btn-danger">Delete
           </button>
         </td>
@@ -63,14 +63,14 @@ class Weight extends Component {
 
     return (
       <div>
-        <h4 className="mb-4">Weights</h4>
+        <h4 className="mb-4">Calories</h4>
         <table className="table mb-5">
           <thead>
             <tr>
-              <th>Weight</th>
+              <th>Calories</th>
               <th>Date</th>
             </tr>
-            {weights}
+            {calories}
           </thead>
         </table>
         <Chart data={this.getData()} />
@@ -79,8 +79,8 @@ class Weight extends Component {
   }
 }
 
-Weight.propTypes = {
-  deleteWeight: PropTypes.func.isRequired,
+Calorie.propTypes = {
+  deleteCalorie: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired
 }
 
@@ -88,4 +88,4 @@ const mapStateToProps = state => ({
   profile: state.profile
 })
 
-export default connect(mapStateToProps, { deleteWeight })(Weight)
+export default connect(mapStateToProps, { deleteCalories })(Calorie)

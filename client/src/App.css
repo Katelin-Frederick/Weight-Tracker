@@ -40,6 +40,29 @@ img {
   color: #bbb !important;
 }
 
+#registerSubmit {
+  margin-bottom: 150px;
+}
+
+#profileActions {
+  margin-bottom: 70px;
+  margin-top: 30px;
+}
+
+.chart {
+  margin-bottom: 100px;
+  margin-top: 60px;
+}
+
+.caloricNeeds {
+  margin-top: 100px;
+}
+
+#deleteAccountBtn {
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
 footer {
   position: absolute;
   padding: 1rem;

@@ -9,6 +9,10 @@ module.exports = function valiateRegisterInput(data) {
 
   data.name = !isEmpty(data.name) ? data.name : ''
   data.email = !isEmpty(data.email) ? data.email : ''
+  data.gentder = !isEmpty(data.gender) ? data.gender : ''
+  data.birthday = !isEmpty(data.birthday) ? data.birthday : ''
+  data.feet = !isEmpty(data.feet) ? data.feet : ''
+  data.inches = !isEmpty(data.inches) ? data.inches : ''
   data.password = !isEmpty(data.password) ? data.password : ''
   data.password2 = !isEmpty(data.password2) ? data.password2 : ''
 
@@ -24,6 +28,25 @@ module.exports = function valiateRegisterInput(data) {
 
   if(!Validator.isEmail(data.email)) {
     errors.email = 'Email is invalid'
+  }
+
+  // Gender Validation
+  if(Validator.isEmpty(data.gender)) {
+    errors.gender = 'Gender field is required'
+  }
+
+  // Birthday Validation
+  if(Validator.isEmpty(data.birthday)) {
+    errors.birthday = 'Birthday field is required'
+  }
+
+  // Height Validation
+  if(Validator.isEmpty(data.feet)) {
+    errors.feet = 'Feet field is required'
+  }
+
+  if(Validator.isEmpty(data.inches)) {
+    errors.inches = 'Inches field is required'
   }
 
   // Password Validation

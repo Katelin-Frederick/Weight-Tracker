@@ -18,6 +18,7 @@ import store from './store'
 import PrivateRoute from './components/common/PrivateRoute'
 import Dashboard from './components/dashboard/Dashboard'
 import AddWeight from './components/weights/AddWeight'
+import AddCalorie from './components/calories/AddCalorie'
 
 // Check for Token
 if(localStorage.jwtToken) {
@@ -55,6 +56,9 @@ class App extends Component {
               </Switch>
               <Switch>
                 <PrivateRoute exact path='/add-weight' component={ AddWeight } />
+              </Switch>
+              <Switch>
+                <PrivateRoute exact path='/add-calories' component={ AddCalorie } />
               </Switch>
             </div>
             <Footer />

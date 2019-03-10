@@ -15,9 +15,35 @@ const UserSchema = new Schema({
     type: String,
     required: true
   },
+  gender: {
+    type: String,
+    required: true
+  },
+  birthday: {
+    type: Date,
+    required: true
+  },
+  feet: {
+    type: Number,
+    required: true
+  },
+  inches: {
+    type: Number,
+    required: true
+  },
   weights: [
     {
       weight: {
+        type: Number
+      },
+      date: {
+        type: Date
+      }
+    }
+  ],
+  calories: [
+    {
+      calorie: {
         type: Number
       },
       date: {

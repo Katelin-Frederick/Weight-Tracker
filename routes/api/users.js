@@ -13,6 +13,7 @@ const keys = require('../../config/keys')
 const validateRegisterInput = require('../../validation/register')
 const validateLoginInput = require('../../validation/login')
 const validateWeightInput = require('../../validation/weights')
+const validateCalorieInput = require('../../validation/calories')
 
 // @route   POST api/users/register
 // @desc    Register
@@ -34,6 +35,10 @@ router.post('/register', (req, res) => {
         const newUser = new User({
           name: req.body.name,
           email: req.body.email,
+          gender: req.body.gender,
+          birthday: req.body.birthday,
+          feet: req.body.feet,
+          inches: req.body.inches,
           password: req.body.password
         })
 
@@ -109,7 +114,12 @@ router.get('/current', passport.authenticate('jwt', { session: false }), (req, r
     id: req.user.id,
     name: req.user.name,
     email: req.user.email,
-    weights: req.user.weights
+    feet: req.user.feet,
+    inches: req.user.inches,
+    birthday: req.user.birthday,
+    gender: req.user.gender,
+    weights: req.user.weights,
+    calories: req.user.calories
   })
 })
 
@@ -149,6 +159,48 @@ router.delete('/weights/:weight_id', passport.authenticate('jwt', { session: fal
         .indexOf(req.params.weight_id)
 
         user.weights.splice(removeIndex, 1)
+
+        user.save().then(user => res.json(user))
+    }).catch(err => res.status(404).json(err))
+  }
+)
+
+// @route   POST api/users/calories
+// @desc    Add Calories to Profile
+// @access  Private
+router.post('/calories', passport.authenticate('jwt', { session: false }), (req, res) => {
+  const { errors, isValid } = validateCalorieInput(req.body)
+
+  // Check Validation
+  if(!isValid) {
+    // Return any errors with 400 status
+    return res.status(400).json(errors)
+  }
+
+  User.findOne({ _id: req.user.id })
+    .then(user => {
+      const newCalorie = {
+        calorie: req.body.calorie,
+        date: req.body.date
+      }
+
+      user.calories.unshift(newCalorie)
+
+      user.save().then(user => res.json(user))
+    })
+})
+
+// @route   DELETE api/users/calories/:calorie_id
+// @desc    Delete Calories
+// @access  Private
+router.delete('/calories/:calorie_id', passport.authenticate('jwt', { session: false }), (req, res) => {
+  User.findOne({ _id: req.user.id })
+    .then(user => {
+      const removeIndex = user.calories
+        .map(item => item.id)
+        .indexOf(req.params.calorie_id)
+
+        user.calories.splice(removeIndex, 1)
 
         user.save().then(user => res.json(user))
     }).catch(err => res.status(404).json(err))
