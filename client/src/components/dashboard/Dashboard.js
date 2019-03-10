@@ -50,7 +50,7 @@ class Dashboard extends Component {
         dashboardContent = (
           // User is Logged In But Has No Weights
         <div>
-          <p className="lead text-muted">Wlcome {user.name}</p>
+          <p className="lead text-muted">Welcome {user.name}</p>
           <p>You have not yet added any information.  Please add some to get started</p>
           <Link to="/add-weight" className="btn btn-lg btn-info mr-4">Add Weights</Link>
           <Link to="/add-calories" className="btn btn-lg btn-info">Add Calories</Link>
