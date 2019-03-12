@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Karla|Montserrat|Quattrocento+Sans|Raleway|Roboto+Mono|Tinos');
+
+body {
+  font-family: 'Tinos', serif;
+  letter-spacing: 1.5px;
+}
+
 img {
   width: 100%;
 }
@@ -38,6 +45,16 @@ img {
 
 .form-control::placeholder {
   color: #bbb !important;
+}
+
+.goldenBtn {
+  background-color: #604020;
+  color: white;
+}
+
+.goldenBtn:hover {
+  background-color: #86592d;
+  color: white;
 }
 
 #registerSubmit {

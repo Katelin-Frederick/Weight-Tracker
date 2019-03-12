@@ -170,7 +170,10 @@ class CaloricNeeds extends Component {
 
           <p className="lead">Caloric Needs: {this.state.caloricNeeds}</p>
 
-          <input type="submit" value="Calculate Caloric Needs" className="btn btn-info btn-block mt-4" />
+          <input 
+            type="submit" 
+            value="Calculate Caloric Needs" 
+            className="btn  btn-block mt-4 goldenBtn" />
         </form>
       </div>
     )

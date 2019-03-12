@@ -153,7 +153,7 @@ class Register extends Component {
 
                 <input 
                   type="submit" 
-                  className="btn btn-info btn-block mt-4" 
+                  className="btn btn-block mt-4 goldenBtn" 
                   id="registerSubmit" 
                 />
               </form>

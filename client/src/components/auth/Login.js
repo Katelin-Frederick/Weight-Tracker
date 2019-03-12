@@ -78,10 +78,10 @@ class Login extends Component {
                   error={errors.password}
                 />
 
-                <input type="submit" className="btn btn-info btn-block mt-4" />
+                <input type="submit" className="btn btn-block mt-4 goldenBtn" />
 
                 <p className="lead text-center mt-4">Don't have an account?
-                  <Link to="/register" className="btn btn-info ml-4">Register</Link>
+                  <Link to="/register" className="btn ml-4 goldenBtn">Register</Link>
                 </p>
               </form>
             </div>

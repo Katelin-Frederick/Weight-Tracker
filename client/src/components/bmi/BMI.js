@@ -75,7 +75,7 @@ class BMI extends Component {
 
           <p className="lead">BMI: {this.state.bmi}</p>
 
-          <input type="submit" value="Calculate BMI" className="btn btn-info btn-block mt-4" />
+          <input type="submit" value="Calculate BMI" className="btn btn-block mt-4 goldenBtn" />
         </form>
       </div>
     )

@@ -21,7 +21,7 @@ class Landing extends Component {
                 <p className="lead">Help keep track of your weight goals</p>
                 <hr/>
                 <div>
-                  <Link to="/register" className="btn btn-lg btn-info mr-2">Sign Up</Link>
+                  <Link to="/register" className="btn btn-lg mr-2 goldenBtn">Sign Up</Link>
                   <Link to="/login" className="btn btn-lg btn-light">Login</Link>
                 </div>
               </div>
