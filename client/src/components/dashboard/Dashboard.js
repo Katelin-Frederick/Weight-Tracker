@@ -52,8 +52,8 @@ class Dashboard extends Component {
         <div>
           <p className="lead text-muted">Welcome {user.name}</p>
           <p>You have not yet added any information.  Please add some to get started</p>
-          <Link to="/add-weight" className="btn btn-lg mr-4 goldenBtn">Add Weights</Link>
-          <Link to="/add-calories" className="btn btn-lg goldenBtn">Add Calories</Link>
+          <Link to="/add-weight" className="btn btn-lg mr-4 mb-4 goldenBtn">Add Weights</Link>
+          <Link to="/add-calories" className="btn btn-lg mb-4 goldenBtn">Add Calories</Link>
         </div>
         )
       }
