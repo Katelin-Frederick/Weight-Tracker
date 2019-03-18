@@ -75,7 +75,7 @@ class AddWeight extends Component {
                   error={errors.date}
                 />
 
-                <input type="submit" value="Submit" className="btn btn-info btn-block mt-4" />
+                <input type="submit" value="Submit" className="btn btn-block mt-4 goldenBtn" />
               </form>
             </div>
           </div>
