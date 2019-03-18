@@ -1,43 +1,21 @@
-# React Express Starter Pack
+# Weight Tracker
 
-> Create full stack apps with React and Express. Run your client and server with a single command. 
+## Description
 
-### Redux Version
-This version does not include Redux
-[Click Here For Redux Version](https://github.com/bradtraversy/react_redux_express_starter) 
+Web Application that allows the user to track certain aspects of the users fitness
 
-## Quick Start
+## Author
 
-``` bash
-# Install dependencies for server
-npm install
+Katelin Frederick 2019 
 
-# Install dependencies for client
-npm run client-install
+## Tools Used
+* React
+* Express
+* Node.js
+* MongoDB
+* CSS
+* javaScript
+* Chart.js
 
-# Run the client & server with concurrently
-npm run dev
-
-# Run the Express server only
-npm run server
-
-# Run the React client only
-npm run client
-
-# Server runs on http://localhost:5000 and client on http://localhost:3000
-```
-
-## App Info
-
-### Author
-
-Brad Traversy
-[Traversy Media](http://www.traversymedia.com)
-
-### Version
-
-1.0.0
-
-### License
-
-This project is licensed under the MIT License
+## Purpose of this Project
+The purpose of this project was to learn about the MERN stack
