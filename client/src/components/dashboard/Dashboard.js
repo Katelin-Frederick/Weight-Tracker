@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom'
 import { getCurrentProfile } from '../../actions/profileActions'
 import { deleteAccount } from '../../actions/authActions'
 import Spinner from '../common/Spinner'
-// import ProfileActions from './ProfileActions'
 import Weight from '../weights/Weight'
 import Calorie from '../calories/Calorie'
 import BMI from '../bmi/BMI'
@@ -38,7 +37,6 @@ class Dashboard extends Component {
             <p className="lead text-muted mb-4">
               Welcome {user.name}
             </p>
-            {/* <ProfileActions /> */}
             <Link to="/add-weight" className="btn btn-light mr-4 mb-5 mt-5">
               Add Weight
             </Link>
