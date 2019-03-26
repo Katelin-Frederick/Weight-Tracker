@@ -53,8 +53,14 @@ I learned how to use the Chart.js library in a React Application.  I also became
 ## Demos
 ![Sign Up](demos/weightSignup.gif)
 
+
+
 ![Add Weight](demos/addWeight.gif)
 
+
+
 ![Add Calories](demos/addCalories.gif)
+
+
 
 ![Calcs](demos/calcs.gif)
