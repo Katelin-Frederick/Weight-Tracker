@@ -51,21 +51,21 @@ npm run client
 I learned how to use the Chart.js library in a React Application.  I also became more comfortable setting up a database with MongoDB and creating routes.
 
 ## Demos
-###SignUp:
+### SignUp:
 
 ![Sign Up](demos/weightSignup.gif)
 
 
-###Adding a new weight:
+### Adding a new weight:
 
 ![Add Weight](demos/addWeight.gif)
 
 
-###Adding new daily calorie intake:
+### Adding new daily calorie intake:
 
 ![Add Calories](demos/addCalories.gif)
 
 
-###BMI and Caloric Needs Calculators
+### BMI and Caloric Needs Calculators
 
 ![Calcs](demos/calcs.gif)
