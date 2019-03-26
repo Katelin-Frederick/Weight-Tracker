@@ -10,6 +10,7 @@ Katelin Frederick 2019
 * [Installation](#installation)
 * [Technologies](#technologies)
 * [What I learned](#what-i-learned)
+* [Demos](#demos)
 
 ## About this Project
 Web application that allows the user to track certain aspects of the users fitness.  Charts users weight on a given date using Chart.js as well as the amount of calories the user consumed on a given date.  Calculates the users BMI and caloric needs.
@@ -48,3 +49,6 @@ npm run client
 
 ## What I learned
 I learned how to use the Chart.js library in a React Application.  I also became more comfortable setting up a database with MongoDB and creating routes.
+
+## Demos
+![Sign Up](demos/weightSignup.gif)
