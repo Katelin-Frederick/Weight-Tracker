@@ -4,7 +4,7 @@
 
 Katelin Frederick 2019
 
-##Table of Contents
+## Table of Contents
 * [About this Project](#about-this-project)
 * [Goal of this Project](#goal-of-this-project)
 * [Installation](#installation)
