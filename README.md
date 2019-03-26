@@ -1,14 +1,43 @@
 # Weight Tracker
 
-## Description
-
-Web Application that allows the user to track certain aspects of the users fitness
-
 ## Author
 
-Katelin Frederick 2019 
+Katelin Frederick 2019
 
-## Tools Used
+##Table of Contents
+* [About this Project](#about-this-project)
+* [Goal of this Project](#goal-of-this-project)
+* [Installation](#installation)
+* [Technologies](#technologies)
+* [What I learned](#what-i-learned)
+
+## About this Project
+Web application that allows the user to track certain aspects of the users fitness.  Charts users weight on a given date using Chart.js as well as the amount of calories the user consumed on a given date.  Calculates the users BMI and caloric needs.
+
+## Goal for this Project
+The goal of this project was to learn about the MERN stack and the Chart.js library.
+
+## Installation
+```
+# Install dependencies for the server
+$ npm install
+
+# Install dependencies for the client
+$ npm run client-install
+
+# Run the client & server with concurrently
+npm run dev
+
+# Run the Express server only
+npm run server
+
+# Run the React client only
+npm run client
+
+# Server runs on http://localhost:5000 and client on http://localhost:3000
+```
+
+## Technologies
 * React
 * Express
 * Node.js
@@ -17,5 +46,5 @@ Katelin Frederick 2019
 * javaScript
 * Chart.js
 
-## Purpose of this Project
-The purpose of this project was to learn about the MERN stack
+## What I learned
+I learned how to use the Chart.js library in a React Application.  I also became more comfortable setting up a database with MongoDB and creating routes.
