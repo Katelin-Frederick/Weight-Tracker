@@ -46,6 +46,7 @@ npm run client
 * CSS
 * javaScript
 * Chart.js
+* Bootstrap
 
 ## What I learned
 I learned how to use the Chart.js library in a React Application.  I also became more comfortable setting up a database with MongoDB and creating routes.
